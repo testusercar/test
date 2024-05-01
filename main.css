@@ -4,3 +4,301 @@
     -webkit-app-region: drag;
     width: 100%;
 }
+/* ==UserStyle==
+@name         Personal Tana fix for segoe UI
+@namespace    USO Archive
+@author       Hoàng Nguyễn
+@description  Makes Segoe UI the default emoji, and base font larger
+@version      20240228.14.56
+@license      NONE
+@preprocessor uso
+==/UserStyle== */
+html {
+  		--baseFontSize: 15px;
+      --fontStackNormalVariable: MySegoeEmoji, InterVariable,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Segoe UI Emoji";
+}
+
+@font-face {
+    src: local("SegoeUIEmoji");
+  	font-family: MySegoeEmoji;
+  	unicode-range: U+000B;
+}
+
+.NodeDoneCheckbox-module_doneCheckbox__-PWx1 {
+    border-radius: 12px;
+    border: 1px grey;
+}
+
+html.isDarkMode {
+    color-scheme: dark;
+    --colorEditorText: var(--colorGray300);
+    --colorEditorTextHighlight: var(--colorGray150);
+    --colorEditorTextMuted: var(--colorGray450);
+    --colorTextHighlightedText: var(--colorEditorTextHighlight);
+    --colorTextHighlightedBackground: var(--colorYellow650);
+    --colorUIText: var(--colorGray375);
+    --colorUITextMuted: var(--colorGray500);
+    --colorUITextDisabled: var(--colorGray550);
+    --colorUITextPlaceholder: var(--colorUITextDisabled);
+    --colorUITextOnHighlight: var(--colorGray150);
+    --colorUITextMutedOnHighlight: var(--colorGray275);
+    --colorUIStroke: var(--colorGray700);
+    --colorUIStrokeHover: var(--colorGray600);
+    --colorUIStrokeSoft: var(--colorGray750);
+    --colorUIBackgroundDisabled: var(--colorGray725);
+    --colorUIStickyTemplateContentBackground: rgba(11, 12, 17, .4);
+    --colorUIListItemHovered: var(--colorGray725);
+    --colorUIListItemFocused: var(--colorBlue650);
+    --colorUIConfigBackground: var(--colorBlue900);
+    --colorUIConfigBorder: var(--colorBlue750);
+    --colorUIConfigTitle: var(--colorBlue250);
+    --colorUITupleStroke: var(--colorGray750);
+    --colorUITupleFocusBackground: var(--colorGray850);
+    --colorAI: var(--colorButtonAiText);
+    --colorFocus: var(--colorBlue500);
+    --colorFocusInactive: var(--colorGray600);
+    --colorFocusWithin: var(--colorBlue700);
+    --colorFocusText: var(--colorBlue400);
+    --colorSelected: var(--colorBlue750);
+    --colorSelectedUnfocused: var(--colorGray600);
+    --colorLink: var(--colorBlue400);
+    --colorHoverLink: var(--colorBlue150);
+    --colorImageLetterboxBackground: var(--colorGray800);
+    --colorNotification: var(--colorBlue500);
+    --colorNotificationStrong: var(--colorRed600);
+    --colorTopBarBackground: var(--colorPanelBackground);
+    --colorPanelBackground: rgba(255,255,255,0.00);
+    --colorPanelBackgroundDimmed: var(--colorGray850);
+    --colorPanelBackgroundTransparent: rgba(28, 29, 36, 0);
+    --colorUIContextMenuBackground: var(--colorGray800);
+    --colorUIContextMenuSeparator: var(--colorGray725);
+    --colorUICardBackground: var(--colorGray775);
+    --colorWidgetPanelBackground: var(--colorGray775);
+    --colorPopoverPanelBackground: var(--colorUIContextMenuBackground);
+    --colorPopoverPanelBorder: var(--colorGray700);
+    --colorLoadingBackground: black;
+    --colorLoadingPattern: var(--colorUIStrokeSoft);
+    --colorTooltipBackground: var(--colorGray750);
+    --colorTooltipText: var(--colorGray200);
+    --colorListItemButtonMenuBackground: var(--colorPanelBackground);
+    --colorListItemButtonMenuText: var(--colorGray500);
+    --colorListItemButtonMenuHoverBackground: var(--colorPanelBackground);
+    --colorListItemButtonMenuHoverText: var(--colorGray300);
+    --colorListItemButtonMenuStroke: var(--colorGray700);
+    --colorListItemButtonColor: var(--colorGray650);
+    --colorListItemButtonHighlightColor: var(--colorGray600);
+    --colorListItemTupleButtonColor: var(--colorGray500);
+    --colorListItemTupleButtonHoverBackground: var(--colorGray750);
+    --colorListItemTupleButtonActiveBackground: var(--colorGray775);
+    --colorListItemTypeColor: var(--colorGray500);
+    --colorCanvasBackground: #000;
+    --colorUITableFooterBackground: var(--colorGray825);
+    --colorUICommandLineInput: var(--colorUIContextMenuBackground);
+    --colorUIDiffIndicator: var(--colorGreen400);
+    --colorSidebarBackground: transparent;
+    --colorSidebarItemHoverText: white;
+    --colorSidebarItemHoverBackground: var(--colorGray800);
+    --colorSidebarItemChevronHoverBackground: var(--colorGray725);
+    --colorSidebarPinnedEmptyBackground: var(--colorGray950);
+    --colorSidebarFadeColor: var(--colorGray950);
+    --colorUIDropAreaBackground: var(--colorBlue700);
+    --colorUIDropAreaBackgroundHover: var(--colorBlue600);
+    --colorUIDropAreaBorder: var(--colorBlue400);
+    --colorUIDropAreaText: var(--colorBlue300);
+    --colorBulletDefaultFill: var(--colorGray500);
+    --colorBulletDefaultOutline: var(--colorGray675);
+    --colorBulletExpandLine: var(--colorGray750);
+    --colorBulletExpandLineSelected: var(--colorGray700);
+    --colorBulletExpandLineReference: var(--colorGray725);
+    --colorBulletExpandLineHoverBackground: var(--colorGray750);
+    --bulletColor1LinkUnderline: var(--colorGray625);
+    --bulletColor1LinkBackground: var(--templateColorDimmed);
+    --templateColor: var(--colorGray475);
+    --templateColorDimmed: var(--colorGray725);
+    --colorConfigAccent: var(--colorGray800);
+    --colorConfigStroke: var(--colorGray700);
+    --colorConfigBackground: var(--colorGray775);
+    --colorConfigEditorBackground: var(--colorGray825);
+    --colorUIConfigTupleFocusBackground: var(--colorPurple950);
+    --colorCommandConfiguration: var(--colorGray800);
+    --colorConfigPanelInputStroke: var(--colorGray900);
+    --colorConfigPanelToolbarText: var(--colorGray300);
+    --colorConfigPanelToolbarTextMuted: var(--colorGray400);
+    --colorConfigPanelLabelText: var(--colorGray400);
+    --colorConfigPanelHelpText: var(--colorGray400);
+    --colorPanelToolbarBackground: var(--colorPanelBackground);
+    --colorPanelToolbarHover: var(--colorCoolGray850);
+    --colorPanelToolbarStroke: var(--colorGray800);
+    --colorPanelToolbarStrokeHover: var(--colorGray700);
+    --colorPanelStroke: var(--colorCoolGray800);
+    --colorPanelStrokeHover: var(--colorCoolGray700);
+    --colorDockedPanelStroke: var(--colorUIStrokeSoft);
+    --colorDockedPanelBackground: var(--colorSidebarBackground);
+    --colorDockResizeHandle: var(--colorSidebarBackground);
+    --colorDockResizeHandleHover: var(--colorFocusWithin);
+    --colorDockResizeHandleActive: var(--colorFocus);
+    --colorToggleBackground: var(--colorGray650);
+    --colorToggleForeground: var(--colorGray300);
+    --colorToggleCheckedBackground: var(--colorGreen550);
+    --colorReferenceSectionGradientStep: var(--colorGray775);
+    --colorReferenceMentionBackground: var(--colorGray825);
+    --colorTableCellCanonicalBackground: #32323d40;
+    --colorTableHeaderContextualContentHoverBackground: var(--colorPanelBackground);
+    --colorTableHeaderCanonicalContentHoverBackground: var(--colorGray775);
+    --colorChatGraphBackground: transparent;
+    --colorChatReplyBackground: var(--colorGray825);
+    --colorAIResponse: var(--colorPurple800);
+    --colorAIChatGraphBackground: var(--colorGreen850);
+    --colorAIChatPanelBackground: var(--colorGray875);
+    --colorAIChatEmbedBackground: var(--colorGray900);
+    --colorAIChatContextBackground: var(--colorPanelBackgroundDimmed);
+    --colorInlineElementText: var(--colorEditorTextHighlight);
+    --colorInlineElementBackground: var(--colorGray700);
+    --colorInlineElementStroke: transparent;
+    --colorInlineElementHoverText: var(--colorInlineElementText);
+    --colorInlineElementHoverBackground: var(--colorGray650);
+    --colorInlineElementHoverStroke: transparent;
+    --colorInlineElementTrashedText: var(--colorInlineElementText);
+    --colorInlineElementTrashedHoverText: var(--colorInlineElementTrashedText);
+    --colorSoftLockShapeBackground: var(--colorInlineElementBackground);
+    --colorSoftLockShapeStroke: var(--colorInlineElementStroke);
+    --colorSoftLockShapeText: var(--colorInlineElementText);
+    --colorRefsExpandedInline: var(--colorGray825);
+    --colorQuickFilterBar: var(--colorGray800);
+    --colorWorkspaceAvatarBackground: var(--colorGray650);
+    --colorWorkspaceAvatarForeground: var(--colorGray200);
+    --colorUserAvatarBackground: var(--colorGray550);
+    --colorUISubtleBackground: var(--colorGray750);
+    --colorUISubtleText: var(--colorGray400);
+    --colorUIInfoBackground: var(--colorBlue900);
+    --colorUIInfoText: var(--colorBlue200);
+    --colorUIInfoIconFill: var(--colorBlue400);
+    --colorUIInfoIconBackground: var(--colorBlue700);
+    --colorUISuccessBackground: var(--colorGreen800);
+    --colorUISuccessText: var(--colorGreen200);
+    --colorUISuccessIconFill: var(--colorGreen400);
+    --colorUISuccessIconBackground: var(--colorGreen700);
+    --colorUIWarningBackground: var(--colorYellow700);
+    --colorUIWarningText: var(--colorYellow100);
+    --colorUIWarningIconFill: var(--colorYellow300);
+    --colorUIWarningIconBackground: var(--colorYellow800);
+    --colorUIErrorBackground: var(--colorRed800);
+    --colorUIErrorText: var(--colorRed200);
+    --colorUIErrorIconFill: var(--colorRed400);
+    --colorUIErrorIconBackground: var(--colorRed700);
+    --colorUIGuidanceBackground: var(--colorUIContextMenuBackground);
+    --colorUIGuidanceStroke: var(--colorUIStroke);
+    --colorUIGuidanceText: var(--colorUIText);
+    --colorUIGuidanceTitle: var(--colorEditorText);
+    --colorUIGuidanceIconFill: var(--colorEditorText);
+    --colorUIGuidanceIconBackground: var(--colorUIStroke);
+    --colorUINodeStateIncoming: var(--colorGreen800);
+    --colorUINodeStateOutgoing: var(--colorRed800);
+    --colorTextButtonNeutralText: var(--colorGray400);
+    --colorButtonNeutralText: var(--colorGray300);
+    --colorButtonNeutralTextHover: var(--colorGray200);
+    --colorButtonNeutralStroke: var(--colorGray600);
+    --colorButtonNeutralStrokeDepth: var(--colorGray600);
+    --colorButtonNeutralBackground: var(--colorGray725);
+    --colorButtonNeutralShadow: var(--colorGray600);
+    --colorButtonNeutralHoverStroke: var(--colorGray450);
+    --colorButtonNeutralHoverBackground: var(--colorGray675);
+    --colorButtonNeutralHoverBackgroundText: var(--colorGray675);
+    --colorButtonNeutralHoverShadow: var(--colorGray600);
+    --colorButtonAffirmativeText: var(--colorGreen250);
+    --colorButtonAffirmativeTextHover: var(--colorGreen150);
+    --colorButtonAffirmativeStroke: var(--colorGreen600);
+    --colorButtonAffirmativeStrokeDepth: var(--colorGreen600);
+    --colorButtonAffirmativeBackground: var(--colorGreen800);
+    --colorButtonAffirmativeShadow: var(--colorGreen650);
+    --colorButtonAffirmativeHoverStroke: var(--colorGreen350);
+    --colorButtonAffirmativeHoverBackground: var(--colorGreen750);
+    --colorButtonAffirmativeHoverBackgroundText: var(--colorButtonAffirmativeHoverBackground);
+    --colorButtonAffirmativeHoverShadow: var(--colorGray600);
+    --colorButtonActiveText: var(--colorBlue250);
+    --colorButtonActiveTextHover: var(--colorBlue150);
+    --colorButtonActiveStroke: var(--colorBlue650);
+    --colorButtonActiveStrokeDepth: var(--colorBlue650);
+    --colorButtonActiveBackground: var(--colorBlue800);
+    --colorButtonActiveShadow: var(--colorBlue650);
+    --colorButtonActiveHoverStroke: var(--colorBlue450);
+    --colorButtonActiveHoverBackground: var(--colorBlue750);
+    --colorButtonActiveHoverBackgroundText: var(--colorButtonActiveHoverBackground);
+    --colorButtonActiveHoverShadow: var(--colorGray600);
+    --colorButtonDestructiveText: var(--colorRed250);
+    --colorButtonDestructiveTextHover: var(--colorRed150);
+    --colorButtonDestructiveStroke: var(--colorRed700);
+    --colorButtonDestructiveStrokeDepth: var(--colorRed700);
+    --colorButtonDestructiveBackground: var(--colorRed800);
+    --colorButtonDestructiveShadow: var(--colorRed700);
+    --colorButtonDestructiveHoverStroke: var(--colorRed450);
+    --colorButtonDestructiveHoverBackground: var(--colorRed750);
+    --colorButtonDestructiveHoverBackgroundText: var(--colorButtonDestructiveHoverBackground);
+    --colorButtonDestructiveHoverShadow: var(--colorGray600);
+    --colorButtonAiText: var(--colorPurple400);
+    --colorButtonAiTextHover: var(--colorPurple350);
+    --colorButtonAiStroke: var(--colorPurple750);
+    --colorButtonAiStrokeDepth: var(--colorPurple750);
+    --colorButtonAiBackground: var(--colorPurple900);
+    --colorButtonAiShadow: var(--colorPurple650);
+    --colorButtonAiHoverStroke: var(--colorPurple550);
+    --colorButtonAiHoverBackground: var(--colorPurple850);
+    --colorButtonAiHoverBackgroundText: var(--colorButtonAiHoverBackground);
+    --colorButtonAiHoverShadow: var(--colorGray600);
+    --colorUICalendarDateHasNodes: var(--colorBlue800);
+    --colorUICalendarHover: var(--colorGray675);
+    --colorUICalendarSelectedBackground: var(--colorBlue750);
+    --colorUICalendarSelectedText: var(--colorBlue100);
+    --colorUICalendarWeekendBackgroundColor: var(--colorGray800);
+    --colorUICalendarPanelBorder: var(--colorGray700);
+    --colorUICalendarPanelBackground: var(--colorUIContextMenuBackground);
+    --colorUICalendarHoverText: inherit;
+    --colorUICalendarHoverBackground: var(--colorGray800);
+    --colorUICalendarOngoingBackground: var(--colorRed450);
+    --colorUICalendarOngoingText: white;
+    --shadowSoft: 0px .1rem .1rem rgba(0, 0, 0, .25), 0px .75rem 1.5rem rgba(0, 0, 0, .3);
+    --shadowHard: 0px .1rem .1rem rgba(0, 0, 0, .2);
+    --shadowPopover: var(--shadowHard), var(--shadowSoft);
+    --shadow1PxDepth: 0 -1px 0 0;
+    --colorBundleIconBackground: var(--colorBlue800);
+    --colorBundleIconForeground: var(--colorGreen200);
+    --colorBundleErrorIconBackground: var(--colorRed600);
+    --colorBundleErrorIconForeground: var(--colorYellow100);
+    --colorDropBackgroundActive: rgba(128, 0, 128, .3);
+    --colorDropBackgroundUploading: rgba(128, 0, 128, .2);
+    --colorModalBackground: rgba(0, 0, 0, .75);
+    --scrollbarForeground: rgba(255, 255, 255, .1);
+    --scrollbarForegroundHover: rgba(255, 255, 255, .2);
+    --scrollbarForegroundActive: rgba(255, 255, 255, .3);
+    --scrollbarBackground: transparent;
+    --scrollbarWidth: .4rem;
+    --inlineCode: #dc9544;
+    --inlineCodeBackground: #2b2d30;
+    --helpBackground: var(--colorGray775);
+    --helpForeground: var(--colorGray350);
+    --helpAccentBackground: var(--colorBlue850);
+    --helpAccentForeground: var(--colorBlue400);
+    --helpOverlayBackground: rgba(0 0 0 / .25);
+    --colorSelectionAreaBorder: var(--colorBlue300);
+    --colorSelectionAreaBackground: rgb(135 177 236 / 10%);
+    --colorSelectionPrimaryBorder: var(--colorBlue650);
+    --colorSelectionPrimaryBackground: var(--colorBlue800);
+    --colorSelectionSecondaryBackground: var(--colorBlue750);
+    --colorTranscribeWidgetPreparingBackground: var(--colorGray600);
+    --colorTranscribeWidgetActiveBackground: var(--colorRed700);
+    --colorTranscribeWidgetPausedBackground: var(--colorGray700);
+}
+
+.Finder-module_results__nZKzJ {
+    box-shadow: none;
+    background-color: black;}
+
+.Modal-module_container__QSS-f .Modal-module_header__FRckF {
+    background-color: black;
+
+}
+
+.SearchResultsList-module_groupTitle__SoDVN {
+
+    background-color: transparent;
+}
