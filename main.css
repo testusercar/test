@@ -309,3 +309,9 @@ html.isDarkMode {
 [data-panel-toolbar="true"] [role="button"] {
 -webkit-app-region: no-drag !important;
 }
+
+.PanelToolbar-module_toolbar__PvDKE {
+    position: relative;
+    height: var(--panelToolbarHeight);
+    -webkit-app-region: drag !important;
+}
