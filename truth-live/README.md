@@ -4,17 +4,25 @@ A rebuild of the `/truth-live` route: a newswire-style live monitor for the
 Truth Social feed, replacing the flat reverse-chronological card list.
 
 ```
-TruthLive.jsx    the route component (default export, drop-in)
-wire.js          pure feed rules — clustering, dedupe, volume, formatting
-styles.js        the stylesheet, injected by the component
-wire.test.mjs    tests for wire.js, run against a real API capture
-fixture.json     50 real dispatches from /api/truth-posts-live (21–23 Aug 2026)
+TruthLive.jsx           the route component (default export, drop-in)
+TruthLive.single.jsx    generated single-file build, for a Zo route editor
+build-single.mjs        regenerates the single-file build
+wire.js                 pure feed rules — clustering, dedupe, volume, formatting
+styles.js               the stylesheet, injected by the component
+wire.test.mjs           tests for wire.js, run against a real API capture
+fixture.json            50 real dispatches from /api/truth-posts-live (21–23 Aug 2026)
 ```
 
 ## Installing
 
-Drop the four source files into the Space app beside the other route components
-and point `/truth-live` at `TruthLive.jsx`. It keeps the same contract as the
+**Into a Zo Space route editor (one file per route):** paste
+`TruthLive.single.jsx`. It is the same code with `wire.js` and `styles.js`
+inlined, React as its only import — Vite emits a byte-identical bundle from
+either form. Regenerate it with `node truth-live/build-single.mjs` after
+changing any source module; edit the modules, never the generated file.
+
+**Into a project that takes multiple files:** drop the source files in beside
+the other route components and point `/truth-live` at `TruthLive.jsx`. It keeps the same contract as the
 route it replaces — a default-exported React component, hooks only, no
 dependencies beyond React, polling `/api/truth-posts-live` every 30s.
 
