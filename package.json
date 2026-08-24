@@ -1,0 +1,8 @@
+{
+  "name": "truth-live-wire",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test truth-live/*.test.mjs"
+  }
+}
